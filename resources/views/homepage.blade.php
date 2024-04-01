@@ -18,7 +18,7 @@
                     <a href="/" class="logo-text">QuickRoute</a>
                 </div>
 
-                <div class="col-6"> 
+                <div class="col-6">
                     <div class="row " >
                     <div class="col-2"><a href="/" class="link-h">Acasa</a></div>
                     <div class="col-2"><a href="/meniu" class="link-h">Meniu</a></div>
@@ -31,7 +31,7 @@
             </div>
         </div>
     </div>
-    
+
         <section id="img-underh">
     <img class="kebab" src="https://linde-stories.com/wp-content/uploads/2021/03/shutterstock_1151970542.jpg" alt="" srcset="">
         </section>
@@ -44,6 +44,6 @@
         <button><i class="fa-brands fa-twitter"></i></button>
 
 
-        
+
     </body>
 </html>

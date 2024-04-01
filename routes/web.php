@@ -14,8 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
 });
+Route::get('/products', function () {
+    return view('products');
+});
+
 
 
 Route::get('/calculate-distance-matrix', [DeliveryController::class, 'calculateDistanceMatrixForPendingDeliveries']);
