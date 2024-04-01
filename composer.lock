@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b626cbdbd311f95895cc768b5b2516eb",
+    "content-hash": "5b3c668fd08c2d746a9136d9eb47f703",
     "packages": [
         {
             "name": "brick/math",
@@ -1727,11 +1727,11 @@
         },
         {
             "name": "laravel/nova",
-            "version": "4.32.14",
+            "version": "4.32.6",
             "dist": {
                 "type": "path",
                 "url": "./vendor/nova",
-                "reference": "b27ac1380351455fccc6b56b3f3208bbd623db09"
+                "reference": "1a27cabe41f9df4dc8c53764a40cd1e52df37a55"
             },
             "require": {
                 "brick/money": "^0.5.0|^0.6.0|^0.7.0|^0.8.0",
@@ -1750,12 +1750,12 @@
                 "symfony/process": "^5.4|^6.0"
             },
             "require-dev": {
-                "larastan/larastan": "^1.0.1|^2.5.1",
                 "laravel/nova-dusk-suite": "8.4.x-dev|9.4.x-dev|10.4.x-dev",
                 "laravel/pint": "^1.6",
                 "laravel/scout": "^9.8|^10.0",
                 "mockery/mockery": "^1.4.4",
-                "orchestra/testbench-dusk": "^6.44|^7.40|^8.22",
+                "nunomaduro/larastan": "^1.0.1|^2.5.1",
+                "orchestra/testbench-dusk": "^6.24|^7.21|^8.0",
                 "phpunit/phpunit": "^9.6|^10.1",
                 "predis/predis": "^1.1.9|^2.0"
             },
@@ -9132,6 +9132,66 @@
                 }
             ],
             "time": "2024-03-03T12:36:25+00:00"
+        },
+        {
+            "name": "timwassenburg/laravel-service-generator",
+            "version": "v1.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/timwassenburg/laravel-service-generator.git",
+                "reference": "9fcd0e48d418f36c94efcb1917062fa9ea7a0fcc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/timwassenburg/laravel-service-generator/zipball/9fcd0e48d418f36c94efcb1917062fa9ea7a0fcc",
+                "reference": "9fcd0e48d418f36c94efcb1917062fa9ea7a0fcc",
+                "shasum": ""
+            },
+            "require-dev": {
+                "laravel/pint": "^1.10",
+                "nunomaduro/larastan": "^2.0",
+                "orchestra/testbench": "^8.5",
+                "pestphp/pest": "^2.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "TimWassenburg\\ServiceGenerator\\Http\\Providers\\CommandServiceProvider",
+                        "TimWassenburg\\ServiceGenerator\\ServiceGeneratorServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "TimWassenburg\\ServiceGenerator\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tim Wassenburg"
+                }
+            ],
+            "description": "Generate Laravel services",
+            "homepage": "https://github.com/timwassenburg/laravel-service-generator",
+            "keywords": [
+                "artisan",
+                "cli",
+                "generator",
+                "laravel",
+                "pattern",
+                "php",
+                "services"
+            ],
+            "support": {
+                "issues": "https://github.com/timwassenburg/laravel-service-generator/issues",
+                "source": "https://github.com/timwassenburg/laravel-service-generator/tree/v1.0.5"
+            },
+            "time": "2023-04-27T09:49:57+00:00"
         }
     ],
     "aliases": [],

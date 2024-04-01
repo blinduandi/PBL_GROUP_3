@@ -17,11 +17,14 @@ return new class extends Migration
             $table->string('city')->nullable();
             $table->string('street')->nullable();
             $table->string('number')->nullable();
+            $table->double('latitude', 10, 6)->nullable();
+            $table->double('longitude', 10, 6)->nullable();
             $table->timestamps();
             $table->softDeletes();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
+
     }
 
     /**
