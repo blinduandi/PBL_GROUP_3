@@ -133,7 +133,7 @@
                             </div>
                             
                             <div class="col-xs-5"> 
-                                <a href="#" class="add-to-cart-btn">Adaugă în coș</a>
+                                <button class="add-to-cart-btn">Adaugă în coș</button>
                             </div>
                             
 
@@ -149,3 +149,4 @@
 
 </body>
 </html>
+
