@@ -20,7 +20,7 @@ class DistanceMatrixService
         foreach ($addresses as $address) {
             $locations[] = [$address->longitude, $address->latitude];
         }
-
+        //dd($locations);
         $response = $client->post($baseUri, [
             'headers' => [
                 'Accept' => 'application/json',

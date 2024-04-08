@@ -1,6 +1,8 @@
 <?php
 use App\Http\Controllers\DeliveryController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DeliveryOptimizationController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,5 @@ Route::get('/products', function () {
 
 
 Route::get('/calculate-distance-matrix', [DeliveryController::class, 'calculateDistanceMatrixForPendingDeliveries']);
+
+Route::get('/optimize-delivery', [DeliveryOptimizationController::class, 'optimizeDelivery']);

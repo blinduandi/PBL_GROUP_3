@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('livery', function (Blueprint $table) {
+        Schema::create('liveries', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('delivery_id');
             $table->string('name');
-            $table->string('description')->nullable();
+            $table->string('phone');
+            $table->enum('transport_type', ['Truck', 'Van', 'Bike', 'Car'])->nullable();
+            $table->unsignedInteger('transport_capacity')->nullable();
+            $table->enum('status', ['Standing', 'Working', 'Inactive'])->default('Inactive');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->foreign('delivery_id')->references('id')->on('deliveries')->onDelete('cascade');
         });
+
     }
 
     /**

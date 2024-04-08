@@ -16,11 +16,7 @@ class DeliveryController extends Controller
         foreach ($pendingDeliveries as $delivery) {
             $addresses[] = $delivery->address;
         }
-dd(count($addresses));
         $distanceMatrix = $distanceMatrixService->calculateDistanceMatrix($addresses);
-
-        // Process distance matrix as needed
-        // Example: Log distances, update delivery records with distances, etc.
 
         return response()->json($distanceMatrix);
     }
