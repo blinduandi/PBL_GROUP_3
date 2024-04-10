@@ -6,25 +6,26 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
         }
 
         .container {
-            width: 600px;
-            padding: 40px;
+            width: 500px; /* Reduced container width */
+            padding: 20px;
             background-color: white;
-            margin: auto;
-            margin-top: 50px;
+            margin: 50px auto 0 auto;
             box-shadow: 0 0 10px rgba(0, 0, 0, .1);
             border-radius: 10px;
         }
 
         input[type=text] {
-            width: 100%;
-            margin-bottom: 20px;
-            padding: 12px;
+            width: calc(100% - 24px); /* Adjusted input width */
+            margin-bottom: 10px; /* Reduced margin bottom */
+            padding: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
-            box-sizing: border-box; /* Ensure padding and border are included in width */
+            box-sizing: border-box;
         }
 
         label {
@@ -36,27 +37,33 @@
         .row {
             display: flex;
             flex-wrap: wrap;
+            margin: -10px; /* Adjusted margin */
         }
 
         .col-50 {
             flex: 50%;
-            padding: 0 20px;
+            padding: 10px; /* Adjusted padding */
         }
 
         .btn {
             background-color: #4CAF50;
             color: white;
-            padding: 15px;
+            padding: 12px;
             border: none;
             width: 100%;
             border-radius: 5px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 16px; /* Reduced font size */
             transition: background-color 0.3s ease;
         }
 
         .btn:hover {
             background-color: #45a049;
+        }
+
+        h2 {
+            font-size: 24px; /* Reduced heading size */
+            margin-top: 0;
         }
     </style>
 </head>
@@ -96,4 +103,3 @@
     </div>
 </body>
 </html>
-
