@@ -2,9 +2,12 @@
 <html>
 <head>
     <title>Checkout Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Ubuntu', sans-serif; /* Apply Ubuntu font */
             background-color: #f2f2f2;
             margin: 0;
             padding: 0;
@@ -62,13 +65,17 @@
         }
 
         h2 {
-            font-size: 24px; /* Reduced heading size */
+            font-size: 48px; /* Increased heading size */
             margin-top: 0;
+            color: white; /* Change text color to white */
+            text-align: center; /* Center align the text */
+            background-color: black; /* Add background color */
+            padding: 10px; /* Add padding */
         }
     </style>
 </head>
 <body>
-    <h2 style="text-align: center;">Checkout Form</h2>
+    <h2>QuickROUTE</h2>
     <div class="container">
         <form action="/submit_checkout_form">
             <div class="row">
