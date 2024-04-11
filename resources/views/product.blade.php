@@ -12,7 +12,25 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 
 <body itemscope="" class="loaded">
-                                               
+
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <div id="cart" class="cart">
+                        <div id="cart-content" class="cart-content"></div>
+                            <li><button class="cart-button" onclick="toggleCart()">Cart</button></li>
+                        </div>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
 <div class="content-block">
 			<div class="content-part">
 
@@ -42,30 +60,33 @@
                                                 <div class="row">
                                                     
                                 <div class="col-xs-6">
-                                        <h3 class="topping-cat-0">
-                                            Topping-uri                                        </h3>
+                                    <h3 class="topping-heading">
+                                        <span class="topping-heading-image" style="background-image: url('src/plus.svg')"></span>
+                                        Topping-uri
+                                    </h3>
+                                    
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="1">
-                                        	                                            Cașcaval - 17 MDL                                            <input type="checkbox" value="1">
+                                        	                                            Cașcaval - 17 MDL                                            <input type="checkbox" value="17" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="4">
-                                        	                                            Carne de pui - 22 MDL                                            <input type="checkbox" value="4">
+                                        	                                            Carne de pui - 22 MDL                                            <input type="checkbox" value="22" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="7">
-                                        	                                            Ciuperci - 17 MDL                                            <input type="checkbox" value="7">
+                                        	                                            Ciuperci - 17 MDL                                            <input type="checkbox" value="17" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="8">
-                                        	                                            Ardei iute                                            <input type="checkbox" value="8">
+                                        	                                            Ardei iute                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="9">
-                                        	                                            Ceapă                                            <input type="checkbox" value="9">
+                                        	                                            Ceapă                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
@@ -73,35 +94,38 @@
                             
                                                     
                                 <div class="col-xs-6">
-                                        <h3 class="topping-cat-1">
-                                            Fara                                        </h3>
+                                    <h3 class="fara-heading">
+                                        <img class="fara-heading-image" src="src/minus.png "></img>
+                                        Fara
+                                    </h3>
+                                    
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="16">
-                                        	                                            Sos alb                                            <input type="checkbox" value="16">
+                                        	                                            Sos alb                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="15">
-                                        	                                            Castraveți                                            <input type="checkbox" value="15">
+                                        	                                            Castraveți                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="13">
-                                        	                                            Roșii                                            <input type="checkbox" value="13">
+                                        	                                            Roșii                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="12">
-                                        	                                            Cartofi pai                                            <input type="checkbox" value="12">
+                                        	                                            Cartofi pai                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="11">
-                                        	                                            Ketchup                                            <input type="checkbox" value="11">
+                                        	                                            Ketchup                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
                                                                             <label class="topping-cbx" data-action="attach-addon" data-product-id="4" data-addon-id="14">
-                                        	                                            Varză                                            <input type="checkbox" value="14">
+                                        	                                            Varză                                            <input type="checkbox" value="0" onchange="handleCheckboxChange(this)">
                                             <span class="checkmark"></span>
                                         </label>
                                     
@@ -147,6 +171,7 @@
 
 </div>
 
+<script src="cart.js"></script>
+
 </body>
 </html>
-
