@@ -5,6 +5,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
             font-family: 'Ubuntu', sans-serif; 
@@ -18,7 +20,7 @@
             width: 80%;
             max-width: 800px; 
             background-color: white;
-            margin: 200px 0 0 50px; 
+            margin: 220px 0 0 50px; 
             box-shadow: 0 0 10px rgba(0, 0, 0, .1);
             border-radius: 10px;
         }
@@ -29,7 +31,7 @@
             max-width: 600px;
             padding: 20px;
             background-color: black;
-            margin: -335px 0 0 1000px;
+            margin: -315px 0 0 1000px;
             box-shadow: 0 0 10px rgba(0, 0, 0, .1);
             border-radius: 10px;
             color: white; 
@@ -73,15 +75,16 @@
         .col-50 {
             flex: calc(100% - 20px);
             margin-bottom: 20px; 
+            padding: 10px 10px;
         }
-
+        
         .col-33 {
             flex: calc(33% - 6px); 
         }
 
         .btn {
-            background-color: #4CAF50;
-            color: white;
+            background-color: yellow; /* Changed to yellow */
+            color: black; /* Changed to black */
             padding: 12px;
             border: none;
             width: 100%;
@@ -92,23 +95,64 @@
         }
 
         .btn:hover {
-            background-color: #45a049;
+            background-color: #e6b800; /* Lighter shade of yellow on hover */
         }
 
-        h2 {
-            font-size: 48px;
-            margin-top: 0;
-            color: white;
-            text-align: center;
-            background-color: black;
-            padding: 10px;
+       
+        .footer-text {
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            font-weight: bold; /* Added font weight */
+            font-size: 60px; /* Added font size */
+        }
+        .footer-text2 {
+            position: fixed;
+            bottom: 10px;
+            right:300px;
+            font-size: 15px;
+            color: rgba(0,0,0,0.5);
+            opacity: 0,5;
+        }
+        .footer-icons {
+            position: fixed;
+            bottom:35px;
+            right:350px;
+        }
+        .icon-link:hover{
+            color:#e6b800;
+        }
+        .icon-link {
+            margin: 0 10px;
+            font-size: 20px;
+            color: black; /* Changed color to black */
+            font-weight: bold; /* Added font weight */
+            cursor:pointer;
+        }
+
+        h3 {
+            font-size: 32px;
+            position: absolute;
+            top: 140px;
+            left: 50px;
+        }
+
+        .clickable-text {
+            position: fixed;
+            top: 500x;
+            left: 50px;
+            color: rgba (0,0,0,0.5);
+            cursor: pointer;
+        }
+
+        .clickable-text:hover {
+            color: gray;
         }
     </style>
 </head>
 <body>
-    <h2>QuickROUTE</h2>
+    <h3>&nbsp&nbspLivrare</h3>
     <div class="container">
-        <h3>Livrare</h3>
         <form id="checkoutForm">
             <div class="row">
                 <div class="col-50">
@@ -129,6 +173,8 @@
             <input type="submit" value="Continue" class="btn">
         </form>
     </div>
+    <div>&nbsp</div>
+    <div class="clickable-text" onclick="goBack()">Etapa Anterioara</div>
     <div class="container2">
         <div class="details">
             <div class="left">
@@ -150,8 +196,21 @@
             </div>
         </div>
     </div>
+    
+    <div class="footer-text">Everyone is Happy <br> &nbsp;&nbsp;with Tasty Food</div>
+    <div class="footer-icons">
+        <a href="#" class="icon-link"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-facebook"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="icon-link"><i class="fab fa-youtube"></i></a>
+        
+    </div>
+    <div class="footer-text2">©2024 QuickRoute, all rights reserved</div>
 
     <script>
+        function goBack(){
+            Window.History.back();
+        }
         document.getElementById('checkoutForm').addEventListener('submit', function(event) {
             event.preventDefault(); 
             
