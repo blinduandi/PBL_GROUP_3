@@ -150,8 +150,8 @@
 
 /* Click styles for topping checkboxes */
 .topping-cbx input:checked ~ .checkmark {
-    background-color: #2196F3; /* Change background color when checkbox is checked */
-    border-color: #2196F3; /* Change border color when checkbox is checked */
+    background-color: green; /* Change background color when checkbox is checked */
+    border-color: green; /* Change border color when checkbox is checked */
 }
 
 /* Hover styles for Add to Cart button */
@@ -219,4 +219,43 @@
 .add-to-cart-btn:active {
     transform: translateY(1px); /* Move button down slightly when clicked */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow when clicked */
+}
+
+
+.topping-heading {
+    position: relative; /* Ensure the container is positioned relative to its normal position */
+    padding-left: 25px; /* Add padding to the left to make space for the image */
+}
+
+.topping-heading-image {
+    position: absolute; /* Position the image absolutely within the container */
+    left: 0; /* Align the image to the left of the container */
+    top: 50%; /* Align the image vertically in the middle */
+    transform: translateY(-50%); /* Adjust the position of the image vertically */
+    width: 20px; /* Adjust the width of the images as needed */
+    height: 20px; /* Adjust the height of the images as needed */
+}
+
+.fara-heading {
+    position: relative; /* Ensure the container is positioned relative to its normal position */
+    padding-left: 25px; /* Add padding to the left to make space for the image */
+}
+
+.fara-heading-image {
+    position: absolute; /* Position the image absolutely within the container */
+    left: 0; /* Align the image to the left of the container */
+    top: 50%; /* Align the image vertically in the middle */
+    transform: translateY(-50%); /* Adjust the position of the image vertically */
+    width: 20px; /* Adjust the width of the images as needed */
+    height: 20px; /* Adjust the height of the images as needed */
+}
+
+/* CSS for checked checkboxes */
+.topping-cbx input[type="checkbox"]:checked + .checkmark:after {
+    background-color: green;
+}
+
+/* CSS for unchecked checkboxes */
+.topping-cbx input[type="checkbox"] + .checkmark:after {
+    background-color: transparent;
 }
